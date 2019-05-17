@@ -1,12 +1,9 @@
 /* global Element */
-import Ember from 'ember';
-import jQuery from 'jquery';
+import { assert } from '@ember/debug';
 
-const {
-    assert,
-    RSVP,
-    Mixin
-    } = Ember;
+import RSVP from 'rsvp';
+import Mixin from '@ember/object/mixin';
+import jQuery from 'jquery';
 
 // assert("Velocity.js must be installed to use this mixin.", jQuery.Velocity);
 

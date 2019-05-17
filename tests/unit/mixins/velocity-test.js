@@ -1,5 +1,5 @@
 /* global Element */
-import Ember from 'ember';
+import EmberObject from '@ember/object';
 import VelocityMixin from 'ember-velocity-mixin/main';
 import { module, test } from 'qunit';
 
@@ -7,20 +7,20 @@ module('Unit | Mixin | velocity');
 
 // Replace this with your real tests.
 test('it works', function(assert) {
-  let VelocityObject = Ember.Object.extend(VelocityMixin);
+  let VelocityObject = EmberObject.extend(VelocityMixin);
   let subject = VelocityObject.create();
   assert.ok(subject);
 });
 
 test('velocity methods are available', function(assert){
-  let VelocityObject = Ember.Object.extend(VelocityMixin);
+  let VelocityObject = EmberObject.extend(VelocityMixin);
   let subject = VelocityObject.create();
   assert.ok(subject.css);
   assert.ok(subject.animate);
 });
 
 test('getDOMElement returns an element', function(assert) {
-  let VelocityObject = Ember.Object.extend(VelocityMixin);
+  let VelocityObject = EmberObject.extend(VelocityMixin);
   let subject = VelocityObject.create();
   const component = {
     element: document.createElement('div')
@@ -30,7 +30,7 @@ test('getDOMElement returns an element', function(assert) {
 });
 
 test('animate returns a promise', function(assert) {
-  const VelocityObject = Ember.Object.extend(VelocityMixin);
+  const VelocityObject = EmberObject.extend(VelocityMixin);
   const subject = VelocityObject.create();
   subject.element = document.createElement('div');
 
